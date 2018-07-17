@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".speed.SpeedActivity" />
+        <activity android:name=".breakText.BreakTextActivity"></activity>
     </application>
 
 </manifest>
