@@ -8,6 +8,7 @@ import android.graphics.Path;
 import android.graphics.PathDashPathEffect;
 import android.graphics.PathEffect;
 import android.graphics.PathMeasure;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -29,6 +30,7 @@ public class SpeedView extends View {
     private static final float DASH_HEIGH = Utils.dp2Px(5);
     private static final String TAG = "qq";
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     Path dash = new Path();
     PathEffect pathEffect;
     PathMeasure pathMeasure = new PathMeasure();
@@ -52,6 +54,8 @@ public class SpeedView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(Utils.dp2Px(2));
         dash.addRect(0, 0, DASH_WIDTH, DASH_HEIGH, Path.Direction.CW);
+        textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
     }
 
     @Override
